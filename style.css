@@ -1,6 +1,13 @@
 #high  {
-    color: rgb(21, 21, 179);
+    color: orange;
     size: 12px;
+}
+
+.timer {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: yellowgreen;
 }
 
 #main {
@@ -15,4 +22,30 @@
     color: green;
     size: 20px;
     text-align: center;
+}
+
+.submit {
+	box-shadow:inset 0px 1px 0px 0px #caefab;
+	background:linear-gradient(to bottom, #77d42a 5%, #5cb811 100%);
+	background-color:#77d42a;
+	border-radius:6px;
+	border:1px solid #268a16;
+	display:inline-block;
+	cursor:pointer;
+	color:#306108;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #aade7c;
+    position: relative;
+}
+.submit:hover {
+	background:linear-gradient(to bottom, #5cb811 5%, #77d42a 100%);
+	background-color:#5cb811;
+}
+.submit:active {
+	position:relative;
+	top:1px;
 }
