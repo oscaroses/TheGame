@@ -1,0 +1,18 @@
+#high  {
+    color: rgb(21, 21, 179);
+    size: 12px;
+}
+
+#main {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    border: 3px solid orange;
+    padding: 10px;
+}
+
+#title {
+    color: green;
+    size: 20px;
+    text-align: center;
+}
