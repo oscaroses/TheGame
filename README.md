@@ -47,3 +47,5 @@ use java to to generate questions
     add buttons to answers
     display right or wrong after click
     reduce timer when wrong.
+    enter name after game to score high score
+    display previous scores when high score is clicked

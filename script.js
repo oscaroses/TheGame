@@ -1,6 +1,7 @@
 //Query Selectors
 var timeEl = document.querySelector(".timer");
 var mainEl = document.querySelector("main");
+var startBut = document.querySelector(".button")
 
 var secondsLeft = 60;
 
@@ -29,7 +30,7 @@ const trivia = [
 
 // When start button is clicked, display first question
 function startGame() {
-   
+   setTime()
 }
 
 function checkanswer () {
@@ -54,3 +55,5 @@ function setTime() {
 function updateDisplay() {
 
 }
+
+startBut.addEventListener("click", startGame)
