@@ -40,3 +40,10 @@ You are required to submit the following for review:
 
 - - -
 © 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+
+
+create basic layout and style.
+use java to to generate questions
+    add buttons to answers
+    display right or wrong after click
+    reduce timer when wrong.
