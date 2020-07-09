@@ -1,7 +1,8 @@
 //Query Selectors
 var timeEl = document.querySelector(".timer");
-var mainEl = document.querySelector("main");
+var mainEl = document.querySelector("#main");
 var startBut = document.querySelector(".button")
+var gameQs = document.querySelector("#theGame")
 
 var secondsLeft = 60;
 
@@ -30,11 +31,13 @@ const trivia = [
 
 // When start button is clicked, display first question
 function startGame() {
-   setTime()
+    updateDisplay()
+    setTime()
 }
 
+// populate another question, when answer is checked.
 function checkanswer () {
-
+    
 }
 
 function listenForAnswer() {
@@ -52,8 +55,25 @@ function setTime() {
     }, 1000)
 }
 
-function updateDisplay() {
+//populate question in main div
+function updateDisplay() {    
+gameQs.innerHTML = "";
+
+for (var i = 0; i < trivia.length; i++)
+var questions = trivia[i]
+
+var li = document.createElement("li");
+li.textContent = "questions"
+li.setAttribute("data-index", i);
+
+li.appendChild(button);
+theGame.appendChild(li);
 
 }
 
-startBut.addEventListener("click", startGame)
+
+startBut.addEventListener("click", function(event) {
+    event.preventDefault();
+    startGame()
+    localStorage.setItem("trivia", JSON.stringify(triva))
+    })

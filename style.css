@@ -1,50 +1,80 @@
-#high  {
-    color: orange;
-    size: 12px;
+#high {
+  color: orange;
+  size: 12px;
 }
 
 .timer {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    color: yellowgreen;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: yellowgreen;
 }
 
 #main {
-    position: relative;
-    margin: auto;
-    width: 50%;
-    border: 3px solid orange;
-    padding: 10px;
+  position: relative;
+  margin: auto;
+  width: 50%;
+  border: 3px solid orange;
+  padding: 10px;
 }
 
 #title {
-    color: green;
-    size: 20px;
-    text-align: center;
+  color: green;
+  size: 20px;
+  text-align: center;
 }
 
-.button {
-	box-shadow: 3px 4px 0px 0px #8a2a21;
-	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-	background-color:#c62d1f;
-	border-radius:18px;
-	border:1px solid #d02718;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:7px 25px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #810e05;
+.button1 {
+  box-shadow: 3px 4px 0px 0px #8a2a21;
+  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+  background-color: #c62d1f;
+  border-radius: 18px;
+  border: 1px solid #d02718;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #810e05;
 }
-.button:hover {
-	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-	background-color:#f24437;
+.button1:hover {
+  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+  background-color: #f24437;
 }
-.button:active {
-	position:relative;
-	top:1px;
+.button1:active {
+  position: relative;
+  top: 1px;
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  background-color: white;
+}
+
+li {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #ff5d88;
+  color: white;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+li button {
+  float: left;
+  border: none;
+  height: 40px;
+  cursor: pointer;
+  background-color: #ff9500;
+  color: white;
+  font-size: 1em;
+}
+
+li button:hover {
+  background-color: #febc5d;
+}
