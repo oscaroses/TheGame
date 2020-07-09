@@ -74,6 +74,5 @@ theGame.appendChild(li);
 
 startBut.addEventListener("click", function(event) {
     event.preventDefault();
-    startGame()
-    localStorage.setItem("trivia", JSON.stringify(triva))
+    startGame();
     })
