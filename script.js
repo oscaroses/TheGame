@@ -89,6 +89,7 @@ startBut.addEventListener("click", function () {
   loadQuestion(currentQuestion);
   setTime();
   startBut.style.display = "none";
+  nextButton.style.display = "";
 });
 
 //This function stores the name entered in the input field.
