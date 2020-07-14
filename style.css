@@ -1,64 +1,77 @@
-#high {
-  color: orange;
-  size: 12px;
+body {
+  background: lightblue;
 }
 
-.timer {
+.container {
+  height: 330px;
+  width: 1000px;
   position: absolute;
-  top: 0;
-  right: 10px;
-  color: yellowgreen;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background: rgba(23, 72, 206, 0.5);
+  padding: 20px;
+  border: 1px solid black;
+  box-shadow: 0 0 8px 3px white;
 }
 
-#main {
-  position: relative;
-  margin: auto;
-  width: 50%;
-  border: 3px solid orange;
-  padding: 10px;
-}
-
-#title {
-  color: green;
-  size: 20px;
+.title {
+  padding-top: 20px;
   text-align: center;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: black;
 }
 
-#button1 {
-  box-shadow: 3px 4px 0px 0px #8a2a21;
-  background: linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
-  background-color: #c62d1f;
-  border-radius: 18px;
-  border: 1px solid #d02718;
+.question {
+  padding: 20px;
+  font-size: 22px;
+  background: black;
+  border-radius: 20px;
+  margin: 10px 0 10px 0;
+  color: wheat;
+}
+
+.option {
+  width: 470px;
   display: inline-block;
+  padding: 10px 0 10px 15px;
+  vertical-align: middle;
+  background: rgba(23, 72, 206, 0.5);
+  margin: 10px 0 10px 0;
+  color: grey;
+  border-radius: 20px;
+}
+
+.option:hover {
+  background: black;
+  color: wheat;
+}
+
+.next-btn {
+  border: none;
+  outline: none;
+  background: rgba(255, 25, 255, 0.5);
+  width: 100px;
+  height: 35px;
+  border-radius: 20px;
   cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
-  font-size: 17px;
-  padding: 7px 25px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #810e05;
-}
-#button1:hover {
-  background: linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
-  background-color: #f24437;
-}
-#button1:active {
-  position: relative;
-  top: 1px;
+  float: right;
+  margin: 10px;
 }
 
-button {
-  background-color: yellow;
-  display: block;
+.next-btn:hover {
+  background: black;
+  color: wheat;
 }
 
-p {
-  color: red;
-  font-size: 25px;
-}
-
-h3 {
+.result {
+  height: 100px;
   text-align: center;
-  font-size: 50px;
+  font-size: 75px;
+}
+
+.option input:checked .option {
+  background: black;
+  color: wheat;
 }
