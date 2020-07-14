@@ -14,6 +14,8 @@ var resultCont = document.getElementById("result");
 var inputName = document.getElementById("name");
 var timeEl = document.getElementById("timer");
 var startBut = document.querySelector(".button");
+var subBut = document.querySelector(".myButton");
+var scoreCon = document.getElementById("scoreC");
 
 function loadQuestion(questionIndex) {
   var q = questions[questionIndex];
@@ -32,7 +34,7 @@ function loadNextQuestion() {
   }
   var answer = selectedOption.value;
   if (questions[currentQuestion].answer == answer) {
-    score += 10;
+    score += 15;
   }
   selectedOption.checked = false;
   currentQuestion++;
@@ -45,6 +47,8 @@ function loadNextQuestion() {
     resultCont.textContent = "Your Score:" + score;
     inputName.style.display = "";
     timeEl.style.display = "none";
+    subBut.style.display = "";
+    scoreCon.style.display = "";
     return;
   }
   loadQuestion(currentQuestion);

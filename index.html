@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <h1 id="timer" style="display: unset;"></h1>
     <div id="quizContainer" class="container">
+      <h1 id="timer" style="display: unset;"></h1>
       <div class="title">Java Quiz</div>
       <div id="question" class="question"></div>
       <label class="option"
@@ -29,14 +29,15 @@
       <a href="#" class="button" style="display: top;">START</a>
     </div>
 
-    <div id="result" class="container result" style="display: none;">
+    <div id="result" class="container result" style="display: none;"></div>
+    <div id="scoreC" class="container score" style="display: none;">
       <input
         type="text"
-        class="name-input"
         id="name"
         placeholder="input name"
         style="display: none;"
       />
+      <a href="#" class="myButton" style="display: none;">SUBMIT</a>
     </div>
     <script src="questions.js"></script>
     <script src="script.js"></script>

@@ -5,10 +5,8 @@ body {
 .container {
   height: 330px;
   width: 1000px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  position: relative;
+  margin: auto;
   background: rgba(23, 72, 206, 0.5);
   padding: 20px;
   border: 1px solid black;
@@ -38,7 +36,7 @@ body {
   padding: 10px 0 10px 15px;
   vertical-align: middle;
   background: rgba(23, 72, 206, 0.5);
-  margin: 10px 0 10px 0;
+  margin: 10px 0 10px 8px;
   color: white;
   border-radius: 20px;
 }
@@ -71,7 +69,12 @@ body {
   font-size: 75px;
 }
 
-.name-input {
+.score {
+  height: 1000px;
+  font-size: 20px;
+}
+
+#name {
   position: relative;
   height: 25px;
 }
@@ -104,6 +107,31 @@ body {
 
 #timer {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 0px;
+  right: 5px;
+}
+
+.myButton {
+  box-shadow: 0px 1px 0px 0px #1c1b18;
+  background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+  background-color: #eae0c2;
+  border-radius: 15px;
+  border: 2px solid #333029;
+  display: inline-block;
+  cursor: pointer;
+  color: #505739;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 12px 16px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+  background-color: #ccc2a6;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
 }

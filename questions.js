@@ -25,10 +25,10 @@ var questions = [
   },
   {
     question: "How do you declare an array?",
-    option1: "{}",
-    option2: "()",
-    option3: "<>",
-    option4: "[]",
+    option1: "{ }",
+    option2: "( )",
+    option3: "< >",
+    option4: "[ ]",
     answer: "4",
   },
 ];
