@@ -1,7 +1,7 @@
 var currentQuestion = 0;
 var score = 0;
 var totQuestions = questions.length;
-var secondsLeft = 60;
+var secondsLeft = 40;
 
 var container = document.getElementById("quizContainer");
 var questionEl = document.getElementById("question");
@@ -135,7 +135,7 @@ resBut.addEventListener("click", function (event) {
   event.preventDefault;
   currentQuestion = 0;
   score = 0;
-  secondsLeft = 60;
+  secondsLeft = 40;
   nextButton.textContent = "Next";
   resultCont.style.display = "none";
   scoreCon.style.display = "none";
