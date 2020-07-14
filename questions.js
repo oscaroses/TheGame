@@ -24,11 +24,11 @@ var questions = [
     answer: "1",
   },
   {
-    question: "How do you declare an array?",
-    option1: "{ }",
-    option2: "( )",
-    option3: "< >",
-    option4: "[ ]",
+    question: "Which one of these is an event listener?",
+    option1: "press",
+    option2: "font",
+    option3: "pull",
+    option4: "keydown",
     answer: "4",
   },
 ];

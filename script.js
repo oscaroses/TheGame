@@ -49,10 +49,10 @@ function loadNextQuestion() {
 }
 
 function gameOver() {
-  if (currentQuestion == totQuestions || secondsLeft <= 0) {
+  if (currentQuestion == totQuestions || secondsLeft <= 1) {
     container.style.display = "none";
     resultCont.style.display = "";
-    resultCont.textContent = "Your Score:" + score;
+    resultCont.textContent = "Final Score:" + score;
     inputName.style.display = "";
     timeEl.style.display = "none";
     subBut.style.display = "";
@@ -70,7 +70,7 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent = "Time:" + secondsLeft;
 
-    if (secondsLeft <= 0) {
+    if (secondsLeft <= 1) {
       clearInterval(timerInterval);
     }
   }, 1000);
@@ -121,6 +121,7 @@ function displayHigh() {
 resBut.addEventListener("click", function (event) {
   event.preventDefault;
   currentQuestion = 0;
+  score = 0;
   secondsLeft = 60;
   nextButton.textContent = "Next";
   resultCont.style.display = "none";
@@ -128,5 +129,4 @@ resBut.addEventListener("click", function (event) {
   container.style.display = "";
   timeEl.style.display = "";
   loadQuestion(currentQuestion);
-  setTime();
 });
