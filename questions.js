@@ -1,3 +1,4 @@
+//Question array used to populate in html.
 var questions = [
   {
     question: "What is JavaScript?",
