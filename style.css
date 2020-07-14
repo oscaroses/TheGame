@@ -2,6 +2,10 @@ body {
   background: lightblue;
 }
 
+#scoreC {
+  text-align: center;
+}
+
 .container {
   height: 330px;
   width: 1000px;

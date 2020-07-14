@@ -1,7 +1,7 @@
 var currentQuestion = 0;
 var score = 0;
 var totQuestions = questions.length;
-var secondsLeft = 25;
+var secondsLeft = 60;
 
 var container = document.getElementById("quizContainer");
 var questionEl = document.getElementById("question");
@@ -35,13 +35,19 @@ function loadNextQuestion() {
   var answer = selectedOption.value;
   if (questions[currentQuestion].answer == answer) {
     score += 15;
+  } else {
+    selectedOption.checked = false;
+    secondsLeft = secondsLeft - 10;
   }
-  selectedOption.checked = false;
   currentQuestion++;
   if (currentQuestion == totQuestions - 1) {
     nextButton.textContent = "Finish";
   }
-  if (currentQuestion == totQuestions) {
+  gameOver();
+}
+
+function gameOver() {
+  if (currentQuestion == totQuestions || secondsLeft <= 0) {
     container.style.display = "none";
     resultCont.style.display = "";
     resultCont.textContent = "Your Score:" + score;
@@ -50,8 +56,9 @@ function loadNextQuestion() {
     subBut.style.display = "";
     scoreCon.style.display = "";
     return;
+  } else {
+    loadQuestion(currentQuestion);
   }
-  loadQuestion(currentQuestion);
 }
 
 function setTime() {
