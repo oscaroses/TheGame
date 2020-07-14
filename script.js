@@ -16,6 +16,8 @@ var timeEl = document.getElementById("timer");
 var startBut = document.querySelector(".button");
 var subBut = document.querySelector(".myButton");
 var scoreCon = document.getElementById("scoreC");
+var hof = document.querySelector(".hof");
+var resBut = document.getElementById("restart");
 
 function loadQuestion(questionIndex) {
   var q = questions[questionIndex];
@@ -55,6 +57,8 @@ function gameOver() {
     timeEl.style.display = "none";
     subBut.style.display = "";
     scoreCon.style.display = "";
+    hof.style.display = "";
+    resBut.style.display = "";
     return;
   } else {
     loadQuestion(currentQuestion);
@@ -76,4 +80,53 @@ startBut.addEventListener("click", function () {
   loadQuestion(currentQuestion);
   setTime();
   startBut.style.display = "none";
+});
+
+addEventListener("keyup", function () {
+  finalName = document.getElementById("name").value;
+});
+
+hallofFame = [];
+
+subBut.addEventListener("click", function (event) {
+  event.preventDefault();
+  var scoresArr = {
+    name: finalName,
+    score: score,
+  };
+
+  hallofFame.push(scoresArr);
+  hallofFame.sort(function (a, b) {
+    return b.score - a.score;
+  });
+
+  hallofFame.splice(5);
+
+  localStorage.setItem("FinalScore", JSON.stringify(hallofFame));
+  displayHigh();
+});
+
+function displayHigh() {
+  hof.innerText = "";
+  var finalScore = JSON.parse(localStorage.getItem("FinalScore"));
+  console.log(finalScore);
+
+  for (i = 0; i < finalScore.length; i++) {
+    var dispScore = document.createElement("p");
+    dispScore.innerHTML = finalScore[i].name + " " + finalScore[i].score;
+    hof.appendChild(dispScore);
+  }
+}
+
+resBut.addEventListener("click", function (event) {
+  event.preventDefault;
+  currentQuestion = 0;
+  secondsLeft = 60;
+  nextButton.textContent = "Next";
+  resultCont.style.display = "none";
+  scoreCon.style.display = "none";
+  container.style.display = "";
+  timeEl.style.display = "";
+  loadQuestion(currentQuestion);
+  setTime();
 });
