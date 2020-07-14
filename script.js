@@ -1,6 +1,7 @@
 var currentQuestion = 0;
 var score = 0;
 var totQuestions = questions.length;
+var secondsLeft = 25;
 
 var container = document.getElementById("quizContainer");
 var questionEl = document.getElementById("question");
@@ -10,6 +11,9 @@ var opt3 = document.getElementById("opt3");
 var opt4 = document.getElementById("opt4");
 var nextButton = document.getElementById("nextButton");
 var resultCont = document.getElementById("result");
+var inputName = document.getElementById("name");
+var timeEl = document.getElementById("timer");
+var startBut = document.querySelector(".button");
 
 function loadQuestion(questionIndex) {
   var q = questions[questionIndex];
@@ -39,9 +43,26 @@ function loadNextQuestion() {
     container.style.display = "none";
     resultCont.style.display = "";
     resultCont.textContent = "Your Score:" + score;
+    inputName.style.display = "";
+    timeEl.style.display = "none";
     return;
   }
   loadQuestion(currentQuestion);
 }
 
-loadQuestion(currentQuestion);
+function setTime() {
+  var timerInterval = setInterval(function () {
+    secondsLeft--;
+    timeEl.textContent = "Time:" + secondsLeft;
+
+    if (secondsLeft <= 0) {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
+}
+
+startBut.addEventListener("click", function () {
+  loadQuestion(currentQuestion);
+  setTime();
+  startBut.style.display = "none";
+});

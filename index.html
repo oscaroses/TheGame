@@ -2,10 +2,12 @@
 <html>
   <head lang="en">
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaQuiz</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
+    <h1 id="timer" style="display: unset;"></h1>
     <div id="quizContainer" class="container">
       <div class="title">Java Quiz</div>
       <div id="question" class="question"></div>
@@ -24,10 +26,18 @@
       <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">
         Next Question
       </button>
-      <a href="#" class="button">START</a>
+      <a href="#" class="button" style="display: top;">START</a>
     </div>
 
-    <div id="result" class="container result" style="display: none;"></div>
+    <div id="result" class="container result" style="display: none;">
+      <input
+        type="text"
+        class="name-input"
+        id="name"
+        placeholder="input name"
+        style="display: none;"
+      />
+    </div>
     <script src="questions.js"></script>
     <script src="script.js"></script>
   </body>

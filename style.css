@@ -71,6 +71,11 @@ body {
   font-size: 75px;
 }
 
+.name-input {
+  position: relative;
+  height: 25px;
+}
+
 .option input:checked .option {
   background: black;
   color: white;
@@ -95,4 +100,10 @@ body {
 .button:hover {
   background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
   background-color: #415989;
+}
+
+#timer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
